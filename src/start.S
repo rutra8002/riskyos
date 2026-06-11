@@ -2,8 +2,7 @@
 .global _start
 
 _start:
-    csrr  t0, mhartid #which core am i on
-    bnez  t0, .hang #if not 0 then hang
+    bnez  a0, .hang #if not 0 then hang
 
     # stack
     la    sp, __stack_top
