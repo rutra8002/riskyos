@@ -8,7 +8,7 @@ mod sbi;
 #[unsafe(no_mangle)]
 pub extern "C" fn main() -> ! {
     sbi::print("Hello, World!\n");
-    sbi::shutdown();
+    loop {}
 }
 
 #[panic_handler]
